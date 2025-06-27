@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import "tailwindcss";
+html{
+    scroll-behavior: smooth;
+}
+.menu{  
+    color:#1e2939;
+    
+}
+.task-items li,.connect li{
+    padding: 0.5rem;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    font-weight: bolder;
+    list-style-type: none;
+}
+.task-items li i,.connect li i{
+    padding: 0.25rem;
+}
+.task-items li:hover,.connect li:hover,.active-list{
+    background-color: #c87efa42;
+}
+img{
+    border-radius: 50% !important;
+}
+.notes-wrapper{
+    display: grid;
+    font-family: 'Patrick Hand', cursive;
+    font-style: normal;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+  
+    gap:10px;
+}
+.notes-wrapper .note{
+    border-radius: 20px;
+    aspect-ratio: 1/1;
+    border-top-left-radius: 0;
+
+
+}
+.notes-wrapper .note .remove{
+    padding-inline: 0.9rem;
+    padding-block: 0.7rem;
+    
+}
+.task-head{
+    font-size:clamp(1.3rem,3vw,1.5rem);
+    padding-inline: 0.6rem;
+    font-weight: bold;
+    color: #1e2939;
+}
+.root{
+    position: relative;
+}
+.task-container{
+    background-color: rgba(0, 0, 0, 0.411) !important;
+    position: absolute;
+    top: 0%;
+}
+.display-form{
+    display: none !important;
+}
+.add-button{
+    padding-inline:clamp(0.7rem,2vw,2rem);
+}
+.task-form form{
+    padding: clamp(1.5rem,3vw,10rem);
+}
+.comming{
+    font-size: clamp(1.5rem,3vw,3.5rem);
+}
+.contact i:hover{
+    color: #0d1d20;
+
+}
+.menu-list{
+    display: flex;
+    gap: 0.5rem;
+}
+
+@media (max-width:650px) {
+    .task-list a,.search .search-bar,.nav .logo-box,.task-list .task-logo,.task-list .list-logo,.connect a{
+        display: none
+    }
+    .menu{
+        padding: 0.8rem;
+    }
+    .wrap{
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+    }
+   
+    .nav,.search{
+        justify-content: center !important;
+    }
+    .add-box{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+    
+    .task-list,.task-items,.list-items,.task-items li,.list-items li,.connect{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+    }
+    .task-items,.list-items,.task-items li,.list-items li,.connect{
+        align-items: center;
+
+    }
+    .task-items li,.list-items li{
+        padding: 0.7rem;
+    }
+}
+.color i{
+    display: none;
+}
+.active{
+    display: block !important;
+}

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO-DO</title>
+    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Caveat&family=Coming+Soon&family=Gloria+Hallelujah&family=Homemade+Apple&family=Indie+Flower&family=Patrick+Hand&family=Permanent+Marker&family=Reenie+Beanie&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="root bg-sky-50 w-[100vw] h-[100vh] overflow-hidden">
+        <div class="flex box w-full h-full">
+            <div class="menu bg-purple-100 p-3 m-3 mr-0 rounded-xl flex flex-col justify-between overflow-y-scroll overflow-x-hidden">
+                <div class="wrap text-gray-800">
+                    <div class="nav flex justify-between">
+                        <div class="logo-box flex justify-center items-center text-xl font-semibold">Menu</div>
+                        <div class="add-box text-4xl cursor-pointer hover:text-purple-600">+</div>
+                    </div>
+                    <div class="search flex items-center my-2 bg-purple-200 p-1 rounded-xl">
+                            <i class="fa-solid fa-magnifying-glass p-2"></i>
+                        <input type="search" name="search" id="search" placeholder="search" class="search-bar focus:outline-none overflow-hidden bg-transparent flex justify-center items-center">
+                    </div>
+                    <div class="task-list ">
+                        <div class="task my-3">
+                            <div class="task-logo font-bold text-md">Task</div>
+                            <ul class="task-items">
+                                <li class="menu-list" id="upcomming"><i class="fa-solid fa-arrow-right"></i><a href="#">Upcomming</a></li>
+                                <li class="menu-list active-list" id="today"><i class="fa-solid fa-calendar-day "></i><a href="#">Today</a></li>
+                                <li class="menu-list" id="important"><i class="fa-solid fa-star "></i><a href="#">Important</a></li>
+                            </ul>
+                        </div>
+                        <div class="List my-3 ">
+                            <div class="list-logo font-bold text-base">List</div>
+                            <ul class="task-items">
+                                <li class="menu-list soon"><i class="fa-solid fa-list"></i><a href="#">List 1</a></li>
+                                <li class="menu-list soon"><i class="fa-solid fa-fingerprint "></i><a href="#">Personal</a></li>
+                                <li class="menu-list soon"><i class="fa-solid fa-briefcase "></i><a href="#">Work</a></li>
+                                <li class="menu-list soon"><i class="fa-solid fa-plus "></i><a href="#">Add New List</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <ul class="connect font-bold">
+                    <li class="menu-list soon" id="collab"><i class="fa-solid fa-link"></i><a href="#">Collab</a></li>
+                    <li class="menu-list" id="about"><i class="fa-solid fa-user"></i><a href="#">About</a></li>
+                    <li class="menu-list soon" id="signup"><i class="fa-solid fa-key"></i><a href="#">SignUp</a></li>
+                </ul>
+
+            </div>
+            <div class="walle w-full overflow-scroll">
+                <div class="hidden about w-full overflow-scroll">
+                    <div class="about-head text-gray-800 text-5xl m-3 font-extrabold">About Me</div>
+                    <div class="about-me p-2">
+                        <p class="text-gray-800"><span class="font-extrabold">ToDo v1.O is Designed and Developed by Sunder Pichai</span>
+                        </p>
+                        <div class="contact text-3xl flex gap-2.5 mt-4 text-gray-600"><a href=""><i class="fa-brands fa-github"></i></a><a href=""><i class="fa-brands fa-whatsapp"></i></a><a href=""><i class="fa-brands fa-instagram"></i></a><a href=""><i class="fa-brands fa-linkedin"></i></a></div>
+                    </div>
+                </div>
+                <div class="hidden comming-soon">
+                    <div class="comming h-[100vh] flex justify-center items-center">
+                        <div class="flex flex-col items-center">
+                            <img src="7100_8_10.jpg" alt="img" class="aspect-square w-[30vw] opacity-50" loading="lazy">
+                             <h2 class="text mt-2 text-purple-300 font-bold comming opacity-50">Coming Soon</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden upcomming w-full overflow-scroll overflow-x-hidden">
+                    <div class="sticky text-gray-800 text-4xl m-3 font-extrabold">Upcomming Notes</div>
+                    <div class="notes-wrapper w-full p-3 text-gray-800 "><div class="note-adder bg-gray-300 hover:bg-gray-600 hover:text-white cursor-pointer"><div class="add-task h-full flex justify-center items-center text-7xl">+</div></div></div>
+                </div>
+                <div class="hidden important w-full overflow-scroll">
+                    <div class="sticky text-gray-800 text-5xl m-3 font-extrabold">Important</div>
+                    <div class="notes-wrapper w-full p-3 text-gray-800"><div class="note-adder bg-gray-300 hover:bg-gray-600 hover:text-white cursor-pointer"><div class="add-task h-full flex justify-center items-center text-7xl">+</div></div></div>
+                </div>
+                <div class="wall today w-full overflow-scroll">
+                    <div class="sticky text-gray-800 text-5xl m-3 font-extrabold">Sticky Wall</div>
+                    <div class="notes-wrapper w-full p-3 text-gray-800">
+                        <div class="note-adder bg-gray-300 hover:bg-gray-600 hover:text-white cursor-pointer"><div class="add-task h-full flex justify-center items-center text-7xl">+</div></div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <div class="task-container display-form flex justify-center items-center bg-transparent overflow-hidden w-[100vw] h-[100vh]">
+        <div class="task-form border-none bg-purple-100">
+            <i class="close-form fa-solid fa-xmark p-2 mt-2 ml-2 hover:bg-gray-900 hover:text-white"></i>
+            <form action="" class="form p-10 font-bold text-gray-900 w-full">
+                <div class="heading text-3xl">Task Heading</div>
+                <input type="search" name="head" id="head" placeholder="Give Heading" class="border-b-gray-700 border-b-2 bg-transparent focus:to-red-700 my-1 p-2">
+                <div class="bullets text-3xl mt-4">Bullets</div>
+                <div class="bullet-add flex"><input type="search" name="desc" id="desc" placeholder="Descriptions" class="border-b-gray-700 border-b-2 bg-transparent mr-0.5 p-2">
+                <div class="add-button cursor-pointer text-sm bg-green-400 hover:bg-green-500 hover:text-white rounded-xl flex justify-center items-center">Add</div></div>
+                <div class="bullets-wrap font-bold bg-purple-200 overflow-x-hidden h-[12vh] mt-2"></div>
+                <div class="priority flex mt-5">
+                    <div>
+                      <input type="radio" id="i" name="priority" value="important" class="sr-only peer" />
+                      <label for="i" class="border-[1px] border-r-0 border-green-500 p-1.5 cursor-pointer peer-checked:bg-green-500 peer-checked:text-white rounded-l-xl transition-colors">Important</label>
+                    </div>
+                    <div>
+                      <input type="radio" id="t" name="priority" value="today" class="sr-only peer" />
+                      <label for="t" class="border-[1px] border-green-500 p-1.5 cursor-pointer peer-checked:scale-200 peer-checked:bg-green-500 peer-checked:text-white transition-colors">Today</label>
+                    </div>
+                    <div>
+                      <input type="radio" id="u" name="priority" value="upcoming" class="sr-only peer" />
+                      <label for="u" class=" border-[1px] border-l-0 border-green-500 p-1.5 cursor-pointer peer-checked:bg-green-500 peer-checked:text-white rounded-r-xl transition-colors">Upcoming</label>
+                    </div>
+                  </div>
+                <div class="sticky-color mt-4">
+                    <div class="sticky m-2 ml-0">Choose Sticky Color</div>
+                    <div class="colors flex flex-wrap gap-3"><div class="red color bg-emerald-200 p-3 rounded-3xl hover:bg-emerald-800 hover:text-white"><i class="fa-solid fa-check active"></i></div><div class="purple color bg-orange-200 p-3 rounded-3xl hover:bg-orange-500 hover:text-white"><i class="fa-solid fa-check"></i></div><div class="green color bg-cyan-200 p-3 rounded-3xl hover:bg-cyan-500 hover:text-white"><i class="fa-solid fa-check"></i></div><div class="red color bg-red-200 p-3 rounded-3xl hover:bg-red-500 hover:text-white"><i class="fa-solid fa-check"></i></div><div class="purple color bg-purple-200 p-3 rounded-3xl hover:bg-green-500 hover:text-white"><i class="fa-solid fa-check"></i></div><div class="green color bg-green-200 p-3 rounded-3xl hover:bg-green-500 hover:text-white"><i class="fa-solid fa-check"></i></div></div>
+                </div>
+                <div class="submit cursor-pointer flex justify-center w-full items-center bg-green-400 hover:bg-green-500 hover:text-white p-3 rounded-xl mt-4">ADD</div>
+
+            </form>
+        </div>
+    </div>
+</body>
+<script src="index.js"></script>
+</html>
