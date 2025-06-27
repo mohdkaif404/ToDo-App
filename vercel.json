@@ -1,11 +1,16 @@
 {
     "version": 2,
-    "public": "public",
     "builds": [
-      { "src": "public/**/*", "use": "@vercel/static" }
+      {
+        "src": "public/**/*",
+        "use": "@vercel/static"
+      }
     ],
-    "rewrites": [
-      { "source": "/(.*)", "destination": "/$1" }
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "/public/$1"
+      }
     ]
   }
   
