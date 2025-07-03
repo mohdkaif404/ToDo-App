@@ -5,14 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TO-DO</title>
     <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Caveat&family=Coming+Soon&family=Gloria+Hallelujah&family=Homemade+Apple&family=Indie+Flower&family=Patrick+Hand&family=Permanent+Marker&family=Reenie+Beanie&family=Shadows+Into+Light&display=swap" rel="stylesheet">
 
 </head>
 <body>
-    <div class="root bg-sky-50 w-[100vw] h-[100vh] overflow-hidden">
+    <div class="root bg-purple-50 w-[100vw] h-[100vh] overflow-hidden">
         <div class="flex box w-full h-full">
-            <div class="menu bg-purple-100 p-3 m-3 mr-0 rounded-xl flex flex-col justify-between overflow-y-scroll overflow-x-hidden">
+            <div class="menu bg-purple-100 p-3 m-3 mr-0 rounded-xl flex flex-col justify-between overflow-y-scroll overflow-x-hidden  [&::-webkit-scrollbar]:w-1
+            lg:[&::-webkit-scrollbar-track]:bg-purple-100
+            lg:[&::-webkit-scrollbar-thumb]:bg-purple-300">
                 <div class="wrap text-gray-800">
                     <div class="nav flex justify-between">
                         <div class="logo-box flex justify-center items-center text-xl font-semibold">Menu</div>
@@ -49,13 +52,13 @@
                 </ul>
 
             </div>
-            <div class="walle w-full overflow-scroll">
+            <div class="walle w-full overflow-hidden overflow-y-scroll">
                 <div class="hidden about w-full overflow-scroll">
                     <div class="about-head text-gray-800 text-5xl m-3 font-extrabold">About Me</div>
                     <div class="about-me p-2">
-                        <p class="text-gray-800"><span class="font-extrabold">ToDo v1.O is Designed and Developed by Sunder Pichai</span>
+                        <p class="text-gray-500 italic"><span class="font-extrabold">ToDo v1.O is Designed and Developed by Sunder Pichai</span>
                         </p>
-                        <div class="contact text-3xl flex gap-2.5 mt-4 text-gray-600"><a href=""><i class="fa-brands fa-github"></i></a><a href=""><i class="fa-brands fa-whatsapp"></i></a><a href=""><i class="fa-brands fa-instagram"></i></a><a href=""><i class="fa-brands fa-linkedin"></i></a></div>
+                        <div class="contact text-3xl flex gap-2.5 mt-4 text-gray-500"><a href=""><i class="fa-brands fa-github"></i></a><a href=""><i class="fa-brands fa-whatsapp"></i></a><a href=""><i class="fa-brands fa-instagram"></i></a><a href=""><i class="fa-brands fa-linkedin"></i></a></div>
                     </div>
                 </div>
                 <div class="hidden comming-soon">
@@ -66,53 +69,51 @@
                         </div>
                     </div>
                 </div>
-                <div class="hidden upcomming w-full overflow-scroll overflow-x-hidden">
+                <div class="hidden upcomming overflow-scroll overflow-x-hidden">
                     <div class="sticky text-gray-800 text-4xl m-3 font-extrabold">Upcomming Notes</div>
-                    <div class="notes-wrapper w-full p-3 text-gray-800 "><div class="note-adder bg-gray-300 hover:bg-gray-600 hover:text-white cursor-pointer"><div class="add-task h-full flex justify-center items-center text-7xl">+</div></div></div>
+                    <div class="notes-wrapper text-gray-800 "><div class="note-adder bg-gray-300 hover:bg-gray-600 hover:text-white cursor-pointer"><div class="add-task h-full flex justify-center items-center text-7xl">+</div></div></div>
                 </div>
-                <div class="hidden important w-full overflow-scroll">
+                <div class="hidden important overflow-scroll overflow-x-hidden">
                     <div class="sticky text-gray-800 text-5xl m-3 font-extrabold">Important</div>
-                    <div class="notes-wrapper w-full p-3 text-gray-800"><div class="note-adder bg-gray-300 hover:bg-gray-600 hover:text-white cursor-pointer"><div class="add-task h-full flex justify-center items-center text-7xl">+</div></div></div>
+                    <div class="notes-wrapper text-gray-800"><div class="note-adder bg-gray-300 hover:bg-gray-600 hover:text-white cursor-pointer"><div class="add-task h-full flex justify-center items-center text-7xl">+</div></div></div>
                 </div>
-                <div class="wall today w-full overflow-scroll">
+                <div class="wall today overflow-x-scroll">
                     <div class="sticky text-gray-800 text-5xl m-3 font-extrabold">Sticky Wall</div>
-                    <div class="notes-wrapper w-full p-3 text-gray-800">
-                        <div class="note-adder bg-gray-300 hover:bg-gray-600 hover:text-white cursor-pointer"><div class="add-task h-full flex justify-center items-center text-7xl">+</div></div>
-                    </div>
+                        <div class="notes-wrapper text-gray-800 "><div class="note-adder bg-gray-300 hover:bg-gray-600 hover:text-white cursor-pointer"><div class="add-task h-full flex justify-center items-center text-7xl">+</div></div></div>
                 </div>
             </div>
             
         </div>
     </div>
-    <div class="task-container display-form flex justify-center items-center bg-transparent overflow-hidden w-[100vw] h-[100vh]">
-        <div class="task-form border-none bg-purple-100">
+    <div class="task-container display-form flex justify-center items-center bg-transparent overflow-hidden w-full h-[100vh]">
+        <div class="task-form border-none bg-purple-50 rounded-md">
             <i class="close-form fa-solid fa-xmark p-2 mt-2 ml-2 hover:bg-gray-900 hover:text-white"></i>
-            <form action="" class="form p-10 font-bold text-gray-900 w-full">
-                <div class="heading text-3xl">Task Heading</div>
-                <input type="search" name="head" id="head" placeholder="Give Heading" class="border-b-gray-700 border-b-2 bg-transparent focus:to-red-700 my-1 p-2">
-                <div class="bullets text-3xl mt-4">Bullets</div>
-                <div class="bullet-add flex"><input type="search" name="desc" id="desc" placeholder="Descriptions" class="border-b-gray-700 border-b-2 bg-transparent mr-0.5 p-2">
-                <div class="add-button cursor-pointer text-sm bg-green-400 hover:bg-green-500 hover:text-white rounded-xl flex justify-center items-center">Add</div></div>
-                <div class="bullets-wrap font-bold bg-purple-200 overflow-x-hidden h-[12vh] mt-2"></div>
-                <div class="priority flex mt-5">
+            <form action="" class="form p-2 lg:p-4 text-gray-800">
+                <div class="heading text-base font-bold text-gray-800">Task Heading</div>
+                <input type="search" name="head" id="head" placeholder="Give Heading" class="flex w-full bg-purple-100 rounded-md items-center focus:outline-none my-1 p-2">
+                <div class="bullets text-base mt-4 text-gray-800 font-bold">Bullets</div>
+                <div class="bullet-add flex bg-purple-100 rounded-md items-center justify-between"><input type="search" name="desc" id="desc" placeholder="Descriptions" class="bg-transparent p-2 focus:outline-0 ">
+                <button type="button" class="add-button p-3 focus:outline-none text-white bg-purple-600 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm  dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900">ADD</button></div>
+                <div class="bullets-wrap font-bold bg-purple-100 overflow-x-hidden h-[12vh] rounded-md mt-2"></div>
+                <div class="priorit font-semibold flex justify-between bg-purple-100 h-fit p-2 rounded-md overflow-hidden items-center px-0 mt-5">
                     <div>
                       <input type="radio" id="i" name="priority" value="important" class="sr-only peer" />
-                      <label for="i" class="border-[1px] border-r-0 border-green-500 p-1.5 cursor-pointer peer-checked:bg-green-500 peer-checked:text-white rounded-l-xl transition-colors">Important</label>
+                      <label for="i" class=" p-3 pr-5 cursor-pointer peer-checked:bg-purple-600 peer-checked:text-white  transition-colors">Important</label>
                     </div>
                     <div>
-                      <input type="radio" id="t" name="priority" value="today" class="sr-only peer" />
-                      <label for="t" class="border-[1px] border-green-500 p-1.5 cursor-pointer peer-checked:scale-200 peer-checked:bg-green-500 peer-checked:text-white transition-colors">Today</label>
+                      <input type="radio" id="t" name="priority" value="today" class="sr-only peer" checked />
+                      <label for="t" class="p-3 lg:px-15 px-11 cursor-pointer peer-checked:scale-200 peer-checked:bg-purple-600 peer-checked:text-white transition-colors">Today</label>
                     </div>
                     <div>
-                      <input type="radio" id="u" name="priority" value="upcoming" class="sr-only peer" />
-                      <label for="u" class=" border-[1px] border-l-0 border-green-500 p-1.5 cursor-pointer peer-checked:bg-green-500 peer-checked:text-white rounded-r-xl transition-colors">Upcoming</label>
+                      <input type="radio" id="u" name="priority" value="upcomming" class="sr-only peer" />
+                      <label for="u" class="p-3 cursor-pointer peer-checked:bg-purple-600 peer-checked:text-white  transition-colors">Upcoming</label>
                     </div>
                   </div>
-                <div class="sticky-color mt-4">
-                    <div class="sticky m-2 ml-0">Choose Sticky Color</div>
-                    <div class="colors flex flex-wrap gap-3"><div class="red color bg-emerald-200 p-3 rounded-3xl hover:bg-emerald-800 hover:text-white"><i class="fa-solid fa-check active"></i></div><div class="purple color bg-orange-200 p-3 rounded-3xl hover:bg-orange-500 hover:text-white"><i class="fa-solid fa-check"></i></div><div class="green color bg-cyan-200 p-3 rounded-3xl hover:bg-cyan-500 hover:text-white"><i class="fa-solid fa-check"></i></div><div class="red color bg-red-200 p-3 rounded-3xl hover:bg-red-500 hover:text-white"><i class="fa-solid fa-check"></i></div><div class="purple color bg-purple-200 p-3 rounded-3xl hover:bg-green-500 hover:text-white"><i class="fa-solid fa-check"></i></div><div class="green color bg-green-200 p-3 rounded-3xl hover:bg-green-500 hover:text-white"><i class="fa-solid fa-check"></i></div></div>
+                <div class="sticky-color mt-4 bg-purple-100 p-2 rounded-md">
+                    <div class="sticky mb-1 text-gray-500 font-semibold">Choose Sticky Color</div>
+                    <div class="colors flex flex-wrap gap-3"><div class="red color bg-emerald-200 p-3 rounded-3xl hover:bg-emerald-800 hover:text-white"><i class="fa-solid fa-check active"></i></div><div class="purple color bg-orange-200 p-3 rounded-3xl hover:bg-orange-500 hover:text-white"><i class="fa-solid fa-check"></i></div><div class="purple color bg-cyan-200 p-3 rounded-3xl hover:bg-cyan-500 hover:text-white"><i class="fa-solid fa-check"></i></div><div class="red color bg-red-200 p-3 rounded-3xl hover:bg-red-500 hover:text-white"><i class="fa-solid fa-check"></i></div><div class="purple color bg-purple-300 p-3 rounded-3xl hover:bg-purple-500 hover:text-white"><i class="fa-solid fa-check"></i></div><div class="purple color bg-purple-200 p-3 rounded-3xl hover:bg-purple-500 hover:text-white"><i class="fa-solid fa-check"></i></div></div>
                 </div>
-                <div class="submit cursor-pointer flex justify-center w-full items-center bg-green-400 hover:bg-green-500 hover:text-white p-3 rounded-xl mt-4">ADD</div>
+                <div class="submit cursor-pointer flex justify-center text-white items-center bg-purple-600 hover:bg-purple-800 p-3 rounded-xl mt-4">ADD</div>
 
             </form>
         </div>

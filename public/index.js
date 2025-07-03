@@ -62,7 +62,7 @@ document.getElementsByClassName('submit')[0].addEventListener('click',(e)=>{
     let notes=document.getElementsByClassName(`${selected}`)[0].lastElementChild;
 
     let bullet=document.getElementsByClassName('added-bullets');
-    notes.insertAdjacentHTML('afterbegin',`<div class="note ${get_color}" id=${id}><i class="note-close fa-solid fa-xmark p-2 mt-1 ml-1 hover:bg-white"></i><p class="task-head ml-1 text-4xl text-gray-800">${heading}</p><ul class="bullets-${selected} list-disc flex flex-col ml-7 pt-2 items-start text-base"></ul></div>`)
+    notes.insertAdjacentHTML('afterbegin',`<div class="note ${get_color}" id=${id}><i class="note-close fa-solid fa-xmark p-2 mt-1 ml-1 hover:bg-white"></i><p class="task-head ml-1 text-4xl text-gray-800">${heading}</p><ul class="bullets-${selected} list-disc flex flex-col ml-7 p-2 items-start text-base"></ul></div>`)
     Array.from(bullet).forEach((val)=>{
         local_obj.bullets.push(`<li>${val.firstElementChild.textContent}</li>`);
         let li=document.createElement('li');
@@ -94,7 +94,6 @@ window.addEventListener('DOMContentLoaded',(e)=>{
         for(let i=0; i<localStorage.length; i++){
             const key=localStorage.key(i);
             let item=JSON.parse(localStorage.getItem(key));
-            console.log(item.color);
             document.getElementsByClassName(`${item.priority.toLowerCase()}`)[0].lastElementChild.insertAdjacentHTML('afterbegin',`<div  class="note ${item.color}" id=${key}><i class="note-close fa-solid fa-xmark p-2 mt-1 ml-1 hover:bg-white"></i><p class="task-head ml-1 text-3xl text-gray-800">${item.heading}</p><ul class="bullets list-disc flex flex-col ml-7 pt-2 items-start text-base">${item.bullets.join(' ')}</ul></div>`)
 
         }
